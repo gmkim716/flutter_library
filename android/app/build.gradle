@@ -42,7 +42,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.flutter_palworld"
-        minSdkVersion 20
+        minSdkVersion 20  // 웹뷰 구현에 필요한 최소 sdk 버전: 20
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName

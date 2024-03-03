@@ -6,9 +6,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // 항상 MaterialApp을 사용하여 앱을 시작
       home: Scaffold(
-        // Scaffold는 앱의 기본적인 레이아웃을 제공
         body: Container(
           decoration: const BoxDecoration(
             color: Colors.orange,

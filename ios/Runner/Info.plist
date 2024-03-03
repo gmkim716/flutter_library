@@ -45,11 +45,13 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+	<!-- http 프로토콜을 사용하는 설정 추가 -->
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowLocalLetworking</key>
 		<true/>
 		<key>NSAllowsArbitraryLoadsWebContent</key>
 		<true/>
-</dict>
+	</dict>
 </plist>
