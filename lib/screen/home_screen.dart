@@ -17,13 +17,25 @@ class _HomeScreen extends State<HomeScreen> {
     showCupertinoDialog(
       context: context,
       builder: (BuildContext context) {
-        // 날짜 선택하는 다이얼로그
-        return CupertinoDatePicker(
-          // 시간 제외하고 날짜만 선택
-          mode: CupertinoDatePickerMode.date,
-          onDateTimeChanged: (DateTime date) {},
+        // 날짜 선택하는 다이얼로그, Align: 자식 위젯을 정렬하는 위젯
+        return Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            color: Colors.white,
+            height: 300,
+            child: CupertinoDatePicker(
+              // 시간 제외하고 날짜만 선택
+              mode: CupertinoDatePickerMode.date,
+              onDateTimeChanged: (DateTime date) {
+                setState(() {
+                  firstDay = date;
+                });
+              },
+            ),
+          ),
         );
       },
+      barrierDismissible: true, // 외부 터치로 닫기 가능
     );
   }
 

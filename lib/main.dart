@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_palworld/screen/getx_test/getx_screen.dart';
+import 'package:flutter_palworld/screen/getx_test/personal_card_screen.dart';
 import 'package:flutter_palworld/screen/home_screen.dart';
 import 'package:flutter_palworld/screen/webview_loading_screen.dart';
 import 'package:flutter_palworld/screen/webview_screen.dart';
@@ -35,7 +37,9 @@ void main() {
       // home: CarouselScreen(),
       // home: WebViewScreen(),
       // home: DDayScreen(),
-      home: WebViewLoadingScreen(),
+      // home: WebViewLoadingScreen(),
+      // home: GetxScreen(),
+      home: PersonalCard(),
     ),
   );
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewLoadingScreen extends StatefulWidget {
+  const WebViewLoadingScreen({super.key});
+
   @override
   State<WebViewLoadingScreen> createState() => _WebViewLoadingScreen();
 }
@@ -24,7 +26,7 @@ class _WebViewLoadingScreen extends State<WebViewLoadingScreen> {
         NavigationDelegate(
           onProgress: (int progress) {
             debugPrint('웹뷰 로딩 중 (progress : $progress%)');
-            const CircularProgressIndicator();
+            const CircularProgressIndicator(); // 동작하는지 확인하지 못함
           },
           onPageStarted: (url) => {
             debugPrint('_isLoading: $_isLoading'),
