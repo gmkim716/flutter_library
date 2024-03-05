@@ -1,4 +1,4 @@
-import 'package:flutter_palworld/model/product_model.dart';
+import 'package:flutter_palworld/level1/model/product_model.dart';
 import 'package:get/get.dart';
 
 class ShoppingController extends GetxController {
