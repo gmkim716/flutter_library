@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_palworld/controller/getx_screen2_controller.dart';
 import 'package:get/get.dart';
 
@@ -18,6 +15,7 @@ class PersonalCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            // GetX로 상태 관리 1
             Container(
               margin: EdgeInsets.all(20), // EdgeInsets.all: 모든 방향으로 동일한 값 적용
               width: double.maxFinite, // double.maxFinite: 가능한 최대 크기
@@ -39,24 +37,27 @@ class PersonalCard extends StatelessWidget {
                         )),
               ),
             ),
+
+            // Obx로 상태 관리
             Container(
-              margin: EdgeInsets.all(20),
-              width: double.maxFinite,
-              height: 100,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-              ),
-              child: Center(
-                child: Text(
-                  'Name',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+                margin: EdgeInsets.all(20),
+                width: double.maxFinite,
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blue,
                 ),
-              ),
-            ),
+                child: Center(
+                  child: Obx(() => Text(
+                        'Age: ${controller2.person().age}',
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                        ),
+                      )),
+                )),
+
+            // GetX로 상태 관리 2
             Container(
               margin: EdgeInsets.all(20), // EdgeInsets.all: 모든 방향으로 동일한 값 적용
               width: double.maxFinite, // double.maxFinite: 가능한 최대 크기
@@ -67,11 +68,15 @@ class PersonalCard extends StatelessWidget {
                 color: Colors.blue,
               ),
               child: Center(
-                child: Text(
-                  'Name',
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
+                child: GetX(
+                  init: Controller2(), // init: 컨트롤러 인스턴스를 생성
+                  builder: (controller2) => Text(
+                    // controller2는 final로 선언된 인스턴스와는 다르다
+                    'Age: ${Get.find<Controller2>().person().age}',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),

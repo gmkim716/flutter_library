@@ -4,6 +4,7 @@ import 'package:flutter_palworld/screen/getx_test/personal_card_screen.dart';
 import 'package:flutter_palworld/screen/home_screen.dart';
 import 'package:flutter_palworld/screen/webview_loading_screen.dart';
 import 'package:flutter_palworld/screen/webview_screen.dart';
+import 'package:flutter_palworld/view/shopping_page.dart';
 
 void main() {
   runApp(
@@ -39,7 +40,8 @@ void main() {
       // home: DDayScreen(),
       // home: WebViewLoadingScreen(),
       // home: GetxScreen(),
-      home: PersonalCard(),
+      // home: PersonalCard(),
+      home: ShoppingPage(), 
     ),
   );
 }
