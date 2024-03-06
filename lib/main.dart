@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_palworld/level2/view/mypage.dart';
+import 'package:flutter_palworld/level1/view/shopping_page.dart';
+// import 'package:flutter_palworld/level2/view/mypage.dart';
 
 void main() {
   runApp(
@@ -36,8 +37,8 @@ void main() {
       // home: WebViewLoadingScreen(),
       // home: GetxScreen(),
       // home: PersonalCard(),
-      // home: ShoppingPage(),
-      home: MyPage(),
+      home: ShoppingPage(),
+      // home: MyPage(),
     ),
   );
 }
